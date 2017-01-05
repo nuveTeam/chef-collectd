@@ -9,6 +9,9 @@ recipe            "collectd::attribute_driven", "Installs collectd plugins via n
 recipe            "collectd::packages", "Installs collectd via packages"
 recipe            "collectd::recompile", "Attempts to recompile collectd"
 
+depends 'yum-epel'
+depends 'apt'
+
 %w{ build-essential yum-epel }.each do |d|
   depends d
 end
